@@ -2,11 +2,12 @@ import React from 'react'
 
 import './style.css'
 import HomeHeader from './HomeHeader'
+import SearchHeader from './SearchHeader'
 
 const Header = () => {
   return (
     <div className="header">
-      <HomeHeader />
+      <SearchHeader />
     </div>
   )
 }
