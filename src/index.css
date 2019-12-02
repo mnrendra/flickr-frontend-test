@@ -1,13 +1,54 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  background: #F5F5F5;
+}
+
+
+input {
+  height: 40px;
+  background: #EEEEEE;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  padding: 0 16px 0 16px;
+  height: 36px;
+  border: none;
+  background: #EEEEEE;
+  border-radius: 6px;
+  color: #707070;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer
+}
+
+button:hover {
+  background: #DDDDDD;
+}
+
+svg.icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  cursor: pointer;
+  float: left;
+}
+
+svg.icon.right {
+  float: right;
+}
+
+svg.icon:hover {
+  fill: rgba(255, 255, 255, .65)
 }
