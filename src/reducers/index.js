@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import homeImages from './feedImages'
+import feedImages from './feedImages'
 
 export default combineReducers({
-  homeImages: homeImages
+  feedImages: feedImages
 })

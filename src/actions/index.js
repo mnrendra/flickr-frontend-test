@@ -4,7 +4,7 @@ export const getFeed = () => ({
   type: types.FEED.GET
 })
 
-export const setFeed = images => ({
+export const setFeed = feedImages => ({
   type: types.FEED.SET,
-  images
+  feedImages
 })

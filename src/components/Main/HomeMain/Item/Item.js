@@ -8,7 +8,7 @@ const Item = ({ imageUrl }) => {
     <div className="item">
       <div
         className="img"
-        style={{ background: `#424242 url(${imageUrl}) center no-repeat` }}
+        style={{ background: `#EEEEEE url(${imageUrl}) center no-repeat` }}
         alt=""
       />
     </div>

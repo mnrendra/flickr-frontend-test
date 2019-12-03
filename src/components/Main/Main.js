@@ -3,7 +3,7 @@ import React from 'react'
 import './style.css'
 import HomeMain from './HomeMain'
 
-const Header = () => {
+const Main = () => {
   return (
     <div className="main">
       <HomeMain />
@@ -11,4 +11,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Main

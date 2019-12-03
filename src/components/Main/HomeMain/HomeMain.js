@@ -1,21 +1,17 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import './style.css'
 import Item from './Item'
 
-const HomeMain = () => {
-  const dummy = [
-    { id: 1, imageUrl: 'https://live.staticflickr.com/7900/40351782223_ee7f950647_m.jpg' },
-    { id: 2, imageUrl: 'https://live.staticflickr.com/7900/40351782223_ee7f950647_m.jpg' },
-    { id: 3, imageUrl: 'https://live.staticflickr.com/7900/40351782223_ee7f950647_m.jpg' }
-  ]
-
+const HomeMain = ({ feedImages }) => {
   const Items = () => {
-    return dummy.map(dum => {
+    return feedImages && feedImages.map(img => {
+      const { image } = img
       return (
         <Item
-          key={dum.id}
-          imageUrl={dum.imageUrl}
+          key={image}
+          imageUrl={image}
         />
       )
     })
@@ -24,4 +20,8 @@ const HomeMain = () => {
   return <div className="home-main">{Items()}</div>
 }
 
-export default HomeMain
+const mapStateToProps = state => ({
+  feedImages: state.feedImages
+})
+
+export default connect(mapStateToProps)(HomeMain)
