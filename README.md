@@ -4,7 +4,7 @@ My ( Muhammad Rendra ) test project based on [AIA](https://github.com/thayub/tes
 
 This project use `ReactJs (create-react-app), redux, react-redux, and redux-saga, axios, and native css`.
 
-and I have deploy the results in [https://mnrendra.github.io/flickr-frontend-test](https://mnrendra.github.io/flickr-frontend-test)
+and I have deploy the results in [here](http://178.128.88.151:3000/)
 
 and the Back-End Take Home Assignment result is in [AIA Backend Test](https://github.com/mnrendra/flickr-backend-test)
 
