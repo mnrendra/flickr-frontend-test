@@ -25,7 +25,7 @@ body,
 #root {
   width: 100%;
   height: 100%;
-  background: #F5F5F5;
+  background: #FFFFFF;
 }
 
 
@@ -69,4 +69,11 @@ svg.icon.right {
 
 svg.icon:hover {
   fill: rgba(255, 255, 255, .65);
+}
+
+img.loading {
+  float: none;
+  width: 80px;
+  height: 40px;
+  margin: 128px auto;
 }

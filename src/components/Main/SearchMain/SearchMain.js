@@ -4,8 +4,9 @@ import { connect } from 'react-redux'
 import { getSearchMore } from '../../../actions'
 import './style.css'
 import Item from './Item'
+import Loading from '../../../assets/logo/flickr-loading.gif'
 
-const SearchMain = ({ searchImages, getSearchMore }) => {
+const SearchMain = ({ searchImages, getSearchMore, loadingSearch, loadingSearchMore }) => {
   const loadMore = () => getSearchMore()
 
   const Items = () => {
@@ -20,11 +21,12 @@ const SearchMain = ({ searchImages, getSearchMore }) => {
   }
 
   const content = () => {
+    if (loadingSearch) return (<img className="loading" src={Loading} alt=""/>)
     return (
       <>
         {Items()}
         <button className="load-more" onClick={loadMore}>
-          Load More
+          {loadingSearchMore ? 'Loading...' : 'Load More'}
         </button>
       </>
     )
@@ -33,8 +35,10 @@ const SearchMain = ({ searchImages, getSearchMore }) => {
   return <div className="search-main">{content()}</div>
 }
 
-const mapStateToProps = ({ searchImages }) => ({
-  searchImages
+const mapStateToProps = ({ searchImages, loadingSearch, loadingSearchMore }) => ({
+  searchImages,
+  loadingSearch,
+  loadingSearchMore
 })
 
 const mapDispatchToProps = dispatch => ({

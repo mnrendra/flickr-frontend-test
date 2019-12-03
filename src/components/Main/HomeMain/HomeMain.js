@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 
 import './style.css'
 import Item from './Item'
+import Loading from '../../../assets/logo/flickr-loading.gif'
 
-const HomeMain = ({ feedImages }) => {
+const HomeMain = ({ feedImages, loadingHome }) => {
   const Items = () => {
     return feedImages && feedImages.map(img => {
       const { image } = img
@@ -17,11 +18,17 @@ const HomeMain = ({ feedImages }) => {
     })
   }
 
-  return <div className="home-main">{Items()}</div>
+  const content = () => {
+    if (loadingHome) return (<img className="loading" src={Loading} alt=""/>)
+    return Items()
+  }
+
+  return <div className="home-main">{content()}</div>
 }
 
-const mapStateToProps = ({ feedImages }) => ({
-  feedImages
+const mapStateToProps = ({ feedImages, loadingHome }) => ({
+  feedImages,
+  loadingHome
 })
 
 export default connect(mapStateToProps)(HomeMain)
