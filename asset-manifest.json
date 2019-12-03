@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/flickr-frontend-test/static/css/main.b59a49db.chunk.css",
+    "main.js": "/flickr-frontend-test/static/js/main.f05851b4.chunk.js",
+    "main.js.map": "/flickr-frontend-test/static/js/main.f05851b4.chunk.js.map",
+    "runtime-main.js": "/flickr-frontend-test/static/js/runtime-main.71cace97.js",
+    "runtime-main.js.map": "/flickr-frontend-test/static/js/runtime-main.71cace97.js.map",
+    "static/js/2.520f80f4.chunk.js": "/flickr-frontend-test/static/js/2.520f80f4.chunk.js",
+    "static/js/2.520f80f4.chunk.js.map": "/flickr-frontend-test/static/js/2.520f80f4.chunk.js.map",
+    "index.html": "/flickr-frontend-test/index.html",
+    "precache-manifest.d3a212faf86496c711073fa0468ccdaa.js": "/flickr-frontend-test/precache-manifest.d3a212faf86496c711073fa0468ccdaa.js",
+    "service-worker.js": "/flickr-frontend-test/service-worker.js",
+    "static/css/main.b59a49db.chunk.css.map": "/flickr-frontend-test/static/css/main.b59a49db.chunk.css.map",
+    "static/media/flickr-loading.gif": "/flickr-frontend-test/static/media/flickr-loading.cea2bf04.gif",
+    "static/media/flickr.png": "/flickr-frontend-test/static/media/flickr.b9c8ddfc.png",
+    "static/media/index.css": "/flickr-frontend-test/static/media/proxima-nova-semibold.9b6f2d8a.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.71cace97.js",
+    "static/js/2.520f80f4.chunk.js",
+    "static/css/main.b59a49db.chunk.css",
+    "static/js/main.f05851b4.chunk.js"
+  ]
+}
