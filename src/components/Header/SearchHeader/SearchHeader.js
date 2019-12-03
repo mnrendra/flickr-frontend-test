@@ -7,8 +7,8 @@ import BackIcon from './back'
 import SearchIcon from './search'
 
 const SearchHeader = ({ query, setQuery, backSection, getSearch }) => {
-  const onSearch = (e) => (e.type === 'click' || e.key === 'Enter') && getSearch(query)
-  const onTyping = e => setQuery(e.target.value)
+  const onSearch = ({ type, key }) => (type === 'click' || key === 'Enter') && getSearch(query)
+  const onTyping = ({ target }) => setQuery(target.value)
   return (
     <div className="search-header">
       <BackIcon onClick={backSection} />

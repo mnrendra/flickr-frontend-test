@@ -1,27 +1,44 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import { getSearchMore } from '../../../actions'
 import './style.css'
 import Item from './Item'
 
-const SearchMain = ({ searchImages }) => {
+const SearchMain = ({ searchImages, getSearchMore }) => {
+  const loadMore = () => getSearchMore()
 
   const Items = () => {
-    return searchImages && searchImages.map(img => {
+    return searchImages && searchImages.map(news => {
       return (
         <Item
-          key={img.image}
-          imageUrl={img.image}
+          key={news.image}
+          imageUrl={news.image}
         />
       )
     })
   }
 
-  return <div className="search-main">{Items()}</div>
+  const content = () => {
+    return (
+      <>
+        {Items()}
+        <button className="load-more" onClick={loadMore}>
+          Load More
+        </button>
+      </>
+    )
+  }
+
+  return <div className="search-main">{content()}</div>
 }
 
 const mapStateToProps = ({ searchImages }) => ({
   searchImages
 })
 
-export default connect(mapStateToProps)(SearchMain)
+const mapDispatchToProps = dispatch => ({
+  getSearchMore: () => dispatch(getSearchMore())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchMain)
