@@ -1,0 +1,18 @@
+import React from 'react'
+
+import './style.css'
+
+const Item = ({ imageUrl }) => {
+  console.log(imageUrl)
+  return (
+    <div className="item">
+      <div
+        className="img"
+        style={{ background: `#424242 url(${imageUrl}) center no-repeat` }}
+        alt=""
+      />
+    </div>
+  )
+}
+
+export default Item
