@@ -10,6 +10,13 @@ export const FEED = {
   SET: 'SET_FEED'
 }
 
+export const SEARCH = {
+  GET: 'GET_SEARCH',
+  SET: 'SET_SEARCH',
+  GET_MORE: 'GET_MORE_SEARCH',
+  SET_MORE: 'SET_MORE_SEARCH'
+}
+
 export const QUERY = {
   SET: 'SET_QUERY'
 }

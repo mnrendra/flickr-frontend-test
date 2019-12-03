@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga'
 
 import reducers from './reducers'
 import sagas from './sagas'
-import { getFeed } from './actions'
+import { getFeed, getSearch } from './actions'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
@@ -23,5 +23,6 @@ ReactDOM.render(
 )
 
 store.dispatch(getFeed())
+store.dispatch(getSearch(''))
 
 serviceWorker.unregister()

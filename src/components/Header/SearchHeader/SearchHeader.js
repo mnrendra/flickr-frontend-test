@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { backSection, setQuery } from '../../../actions'
+import { backSection, getSearch, setQuery } from '../../../actions'
 import './style.css'
 import BackIcon from './back'
 import SearchIcon from './search'
 
-const SearchHeader = ({ query, setQuery, backSection }) => {
-  const onSearch = (e) => (e.type === 'click' || e.key === 'Enter') && console.log(query)
+const SearchHeader = ({ query, setQuery, backSection, getSearch }) => {
+  const onSearch = (e) => (e.type === 'click' || e.key === 'Enter') && getSearch(query)
   const onTyping = e => setQuery(e.target.value)
   return (
     <div className="search-header">
@@ -31,6 +31,7 @@ const mapStateToProps = ({ query }) => ({
 
 const mapDispatchToProps = dispatch => ({
   backSection: () => dispatch(backSection()),
+  getSearch: keyword => dispatch(getSearch(keyword)),
   setQuery: value => dispatch(setQuery(value))
 })
 

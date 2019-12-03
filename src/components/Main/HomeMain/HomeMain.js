@@ -20,8 +20,8 @@ const HomeMain = ({ feedImages }) => {
   return <div className="home-main">{Items()}</div>
 }
 
-const mapStateToProps = state => ({
-  feedImages: state.feedImages
+const mapStateToProps = ({ feedImages }) => ({
+  feedImages
 })
 
 export default connect(mapStateToProps)(HomeMain)
