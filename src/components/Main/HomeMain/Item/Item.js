@@ -3,7 +3,6 @@ import React from 'react'
 import './style.css'
 
 const Item = ({ imageUrl }) => {
-  console.log(imageUrl)
   return (
     <div className="item">
       <div
